@@ -16,6 +16,7 @@
 body {
     display: flex;
     justify-content: center;
+    margin: 0;
 }
 
 .main-container {
@@ -58,9 +59,130 @@ a {
     color: var(--main-bg-color)
 }
 
-.zone-filtre {
+/****** Nav ***********/
+nav {
     display: flex;
-    object-fit: cover;
+    justify-content: space-between;
+    height: 79px;
+}
+
+nav img {
+    width: 61px;
+    height: 19px;
+    margin-top: 16px;
+}
+
+nav .buttons {
+    display: flex;
+    gap: 68px;
+    
+}
+
+nav a {
+    font-family: Raleway;
+    font-size: 16px;
+    text-align: center;
+    padding-top: 16px;
+    border-top: 2px solid transparent;
+}
+
+nav a:hover {
+    color: #0065FC;
+    border-top: 2px solid #0065FC;
+}
+
+/****** Header ***********/
+.info-group {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.headline {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.headline h1 {
+    font-family: Raleway;
+    font-size: 22px;
+    margin: 0;
+}
+
+.headline p {
+    font-family: Raleway;
+    margin: 0;
+}
+
+.zone-recherche {
+    display: flex;
+    width: 377px;
+    border: 1px solid #F2F2F2;
+    border-radius: 15px;
+}
+
+.zone-recherche .logo-gps {
+    padding: 15px 18px;
+    background-color: #F2F2F2;
+    border-radius: 15px 0 0 15px;
+}
+
+.zone-recherche form {
+    display: flex
+}
+
+.zone-recherche #input-recherche {
+    width: 195px;
+    font-family: Raleway;
+    font-weight: 700;
+    font-size: 18px;
+    text-align: center;
+    border: none;
+}
+
+#input-recherche::placeholder {
+    color: black;
+}
+
+.zone-recherche button {
+    width: 132px;
+    color: white;
+    background-color: #0065FC;
+    font-family: Raleway;
+    font-weight: 700;
+    font-size: 18px;
+    border: none;
+    border-radius: 0 15px 15px 0;
+}
+
+.zone-recherche button:hover {
+    opacity: 0.7;
+}
+
+.filterbar {
+    display: flex;
+    gap: 15px;
+}
+
+.filterbar h2 {
+    font-family: Raleway;
+    font-size: 18px;
+}
+
+.filter {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 4px 19px;
+    font-family: Raleway;
+    font-size: 17px;
+}
+
+.filter img {
+    flex-shrink: 0;
+    width: auto;
+    height: auto;
 }
 
 .info {
