@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
@@ -20,12 +20,10 @@
             <nav>
                 <img src="images/logo/booki.png" alt="Logo de Booki">
                 <div class="menu">
-                    <div class="desktop">
                         <div class="buttons">
                             <a class="btn-hebergement" href="#lien-hebergements">Hébergements</a>
                             <a class="btn-activite" href="#lien-activites">Activités</a>
                         </div>
-                    </div>
                 </div>
             </nav>
         </header>
@@ -40,10 +38,23 @@
                         <img src="images/logo/pointgps.png" alt="Icone de point GPS">
                     </div>
                         <form>
-                            <input type="texte" id="input-recherche" placeholder="Marseille, France" aria-label="Rechercher">
+                            <input type="text" id="input-recherche" placeholder="Marseille, France" aria-label="Rechercher">
                             <button type="submit">Rechercher</button>
                         </form>
                 </div>
+
+<!---- This part is only visible for small devices (phones, less than 768px) ----->
+                <div class="zone-recherche-portable">
+                    <div class="logo-gps">
+                        <img src="images/logo/pointgps.png" alt="Icone de point GPS">
+                    </div>
+                        <form>
+                            <input type="text" id="input-recherche" placeholder="Marseille, France" aria-label="Rechercher">
+                            <button type="submit"><img id="logo-loupe" src="images/logo/loupe.png" alt="Logo de loupe"></button>
+                        </form>
+                </div>
+<!---- End of the part visible only for small devices (phones, less than 768px) ----->
+
                 <div class="filterbar">
                         <h2>Filtres</h2>
                     <a href="#">

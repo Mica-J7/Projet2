@@ -24,9 +24,13 @@ body {
 }
 
 .main-container {
+    display: flex;
+    flex-direction: column;
     width: 100%;
     max-width: 1440px;
+    min-width: 320px;
     padding: 0 50px;
+    gap: 30px;
     box-sizing: border-box;
 }
 
@@ -34,7 +38,6 @@ main {
     display: flex;
     flex-direction: column;
     gap: 35px;
-    margin-bottom: 35px;
 }
 
 a {
@@ -47,7 +50,6 @@ nav {
     display: flex;
     justify-content: space-between;
     height: 79px;
-    margin-bottom: 30px;
 }
 
 nav img {
@@ -59,14 +61,15 @@ nav img {
 nav .buttons {
     display: flex;
     gap: 68px;
-    
 }
 
 nav a {
     font-size: 16px;
     text-align: center;
     padding-top: 16px;
+    padding-bottom: 16px;
     border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent;
 }
 
 nav a:hover {
@@ -139,6 +142,56 @@ nav a:hover {
     opacity: 0.7;
 }
 
+
+/******** This part is only visible for small devices
+(phones, less than 768px)  **************/
+
+.zone-recherche-portable {
+    display: flex;
+    width: 377px;
+    border: 1px solid #F2F2F2;
+    border-radius: 15px; 
+}
+
+.zone-recherche-portable .logo-gps {
+    padding: 15px 18px;
+    background-color: #F2F2F2;
+    border-radius: 15px 0 0 15px;
+}
+
+.zone-recherche-portable form {
+    display: flex
+}
+
+.zone-recherche-portable #input-recherche {
+    width: 278px;
+    font-weight: 700;
+    font-size: 18px;
+    text-align: center;
+    border: none;
+}
+
+.zone-recherche-portable #input-recherche::placeholder {
+    color: black;
+}
+
+.zone-recherche-portable #logo-loupe {
+    background-color: #0065FC;
+    border: none;
+    padding: 15px 16px;
+    border-radius: 15px;
+}
+
+.zone-recherche-portable button {
+    border: none;
+    background: none;
+    padding: 0;
+    display: flex; 
+}
+/******** End of the part visible only for small devices
+(phones, less than 768px)  **************/
+
+
 .filterbar {
     display: flex;
     height: 50px;
@@ -164,7 +217,7 @@ nav a:hover {
 
 .filter:hover {
     background-color: #DEEBFF;
-    opacity: 0.7;
+   
 }
 
 .filter h3 {
@@ -240,16 +293,19 @@ nav a:hover {
 .hebergements {
     display: flex;
     flex-direction: column;
-    width: 68%;
+    width: 65%;
 }
 
 .hebergements a {
-    width: 33%;
+    width: 30.8%;
+    min-width: 30.8%;
+    box-sizing: border-box;
 }
 
 .hebergements .card {
     display: flex;
     flex-direction: column;
+    height: 100%;
 }
 
 .hebergements .card img {
@@ -347,10 +403,15 @@ nav a:hover {
     gap: 30px;
 }
 
+.activites a {
+    width: 23%;
+}
+
 .activites-card {
     display: flex;
     flex-direction: column;
     background-color: white;
+    max-height: 439px;
     border-radius: 20px;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
 }
@@ -372,10 +433,6 @@ nav a:hover {
 .activites-cards-line {
     display: flex;
     gap: 30px;
-}
-
-.activites a {
-    width: 23%;
 }
 
 /****** Footer ***********/
@@ -431,6 +488,7 @@ footer .assistance {
 @media (max-width: 1024px) {
     .hebergements-and-populaires {
         flex-direction: column;
+        gap: 50px;
     }
 
     .hebergements {
@@ -439,7 +497,6 @@ footer .assistance {
 
     .populaires {
         width: 100%;
-        margin-top: 50px;
     }
 
     .populaires-cards {
@@ -459,9 +516,65 @@ footer .assistance {
     .populaires-cards .card-subtitle {
         font-size: 13px;
     }
+
+    .activites {
+        max-height: 390px;
+    }
+
+    .activites a {
+        min-width: 23%;
+    }
+
+    .activites-card {
+        height: 270px;
+    }
+
+    .activites-card img {
+        height: 200px;
+    }
 }
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
-    /* ... */
+
+    .main-container {
+        padding: 0;
+        gap: 30px;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+        height: 115px;
+    }
+
+    .menu {
+        width: 100%;
+    }
+
+    nav .buttons {
+        gap: 0px;
+    }
+
+    .btn-hebergement {
+        width: 50%;
+        border-bottom: solid 2px #F2F2F2;
+        padding: 0 0 16px 0;
+    }
+
+    .btn-activite {
+        width: 50%;
+        border-bottom: solid 2px #F2F2F2;
+        padding: 0 0 16px 0;
+    }
+
+    nav a:hover {
+        color: #0065FC;
+        border-bottom: 2px solid #0065FC;
+        border-top: transparent;
+    }
+
+    .info-group {
+        padding: 0 20px 0 20px;
+    }
 }
