@@ -1,6 +1,7 @@
 /****** General ***********/
 * {
     font-family: 'Raleway', sans-serif;
+    box-sizing: border-box;
 }
 
 :root {
@@ -31,7 +32,6 @@ body {
     min-width: 320px;
     padding: 0 50px;
     gap: 30px;
-    box-sizing: border-box;
 }
 
 main {
@@ -53,9 +53,9 @@ nav {
 }
 
 nav img {
-    width: 61px;
-    height: 19px;
-    padding: 30px 50px;
+    width: 121px;
+    height: 79px;
+    padding: 30px 60px 30px 0;
 }
 
 nav .buttons {
@@ -102,6 +102,7 @@ nav a:hover {
 .zone-recherche {
     display: flex;
     width: 377px;
+    height: 49px;
     border: 1px solid #F2F2F2;
     border-radius: 15px;
 }
@@ -147,8 +148,9 @@ nav a:hover {
 (phones, less than 768px)  **************/
 
 .zone-recherche-portable {
-    display: flex;
-    width: 377px;
+    display: none;
+    width: 335px;
+    height: 49px;
     border: 1px solid #F2F2F2;
     border-radius: 15px; 
 }
@@ -160,11 +162,11 @@ nav a:hover {
 }
 
 .zone-recherche-portable form {
-    display: flex
+    display: flex;
 }
 
 .zone-recherche-portable #input-recherche {
-    width: 278px;
+    width: 236px;
     font-weight: 700;
     font-size: 18px;
     text-align: center;
@@ -188,18 +190,41 @@ nav a:hover {
     padding: 0;
     display: flex; 
 }
+
+.zone-recherche-portable button:hover {
+    opacity: 0.7;
+}
+
 /******** End of the part visible only for small devices
 (phones, less than 768px)  **************/
 
 
 .filterbar {
     display: flex;
+    align-items: center;
     height: 50px;
     gap: 15px;
 }
 
 .filterbar h2 {
     font-size: 18px;
+    margin: 0;
+}
+
+.all-filters {
+    display: flex;
+    height: 50px;
+    gap: 15px;
+}
+
+.filter-frame-one {
+    display: flex;
+    gap: 15px;
+}
+
+.filter-frame-two {
+    display: flex;
+    gap: 15px;
 }
 
 .filter {
@@ -254,10 +279,8 @@ nav a:hover {
 }
 
 .hebergements-and-populaires section {
-    background-color: var(--main-bg-color);
     border-radius: 20px;
     padding: 30px;
-    box-sizing: border-box;
     gap: 30px;
 }
 
@@ -291,6 +314,7 @@ nav a:hover {
 
 /****** Hebergements ***********/
 .hebergements {
+    background-color: var(--main-bg-color);
     display: flex;
     flex-direction: column;
     width: 65%;
@@ -299,7 +323,6 @@ nav a:hover {
 .hebergements a {
     width: 30.8%;
     min-width: 30.8%;
-    box-sizing: border-box;
 }
 
 .hebergements .card {
@@ -352,6 +375,7 @@ nav a:hover {
 
 /****** Populaires ***********/
 .populaires {
+    background-color: var(--main-bg-color);
     width: 32%;
 }
 
@@ -379,7 +403,6 @@ nav a:hover {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    box-sizing: border-box;
 }
 
 .populaires-cards .card-title {
@@ -401,6 +424,10 @@ nav a:hover {
     flex-direction: column;
     padding: 30px;
     gap: 30px;
+}
+
+.activites-title {
+    display: flex;
 }
 
 .activites a {
@@ -437,8 +464,7 @@ nav a:hover {
 
 /****** Footer ***********/
 footer {
-    display: flex;
-    justify-content: flex-start;
+    display: flex;  
     background-color: #F2F2F2;
 }
 
@@ -486,6 +512,18 @@ footer .assistance {
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
+    .filterbar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        height: 91px;
+        gap: 20px;
+    }
+    
+    .filter h3 {
+        font-size: 16px;
+    }
+
     .hebergements-and-populaires {
         flex-direction: column;
         gap: 50px;
@@ -510,15 +548,15 @@ footer .assistance {
     }
 
     .populaires-cards .card-title {
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .populaires-cards .card-subtitle {
-        font-size: 13px;
+        font-size: 14px;
     }
 
-    .activites {
-        max-height: 390px;
+    .activites-cards-line {
+       width: 864px;
     }
 
     .activites a {
@@ -538,6 +576,8 @@ footer .assistance {
 @media (max-width: 767.98px) {
 
     .main-container {
+        display: flex;
+        flex-direction: column;
         padding: 0;
         gap: 30px;
     }
@@ -552,6 +592,10 @@ footer .assistance {
         width: 100%;
     }
 
+    nav img {
+        padding: 30px;
+    }
+    
     nav .buttons {
         gap: 0px;
     }
@@ -577,4 +621,145 @@ footer .assistance {
     .info-group {
         padding: 0 20px 0 20px;
     }
+
+    .zone-recherche {
+        display: none;
+    }
+
+    .zone-recherche-portable {
+        display: flex;
+    }
+
+    .filterbar {
+        height: 161px;
+    }
+
+    .all-filters {
+        flex-direction: column;
+        width: 100%;
+        max-width: 335px;
+    }
+
+    .filter-frame-one {
+        width: 100%;
+        height: 50px;
+        gap: 10px;
+    }
+
+    .filter-frame-two {
+        height: 50px;
+        gap: 10px;
+    }
+
+    .filterbar a {
+        width: 100%;
+    }
+
+    .filter {
+        width: 100%;
+    }
+
+    .filter h3 {
+        font-size: 14px;
+    }
+
+    .hebergements-and-populaires {
+        flex-direction: column-reverse;
+        gap: 15px;
+    }
+
+    .hebergements-and-populaires section {
+        padding: 20px;
+        border-radius: 0;
+        gap: 15px;
+    }
+
+    .populaires-cards {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .populaires-title {
+        margin-bottom: 15px;
+    }
+
+    .populaires-cards a {
+        width: 335px;
+    }
+
+    .populaires-cards .card {
+        margin: 0;
+    }
+
+    .cards-line-one {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .cards-line-two {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hebergements {
+        background-color: #FFFFFF;
+    }
+
+    .hebergements a {
+        min-width: 335px;
+    }
+
+    .activites {
+        padding: 0 20px 0 20px;
+    }
+
+    .activites-cards-line{
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .activites-card {
+        width: 335px;
+        height: 200px;
+    }
+
+    .activites img {
+        height: 141px;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+}
+
+
+
+
+
+
+
+/* Small devices (phones, less than 370px) */
+@media (max-width: 369.98px) {
+
+    .zone-recherche-portable {
+        width: 280px;
+    }
+
+    .zone-recherche-portable form {
+        width: 230px;
+    }
+
+    .zone-recherche-portable #input-recherche {
+        width: 186px;
+    }
+
+    .populaires-cards a {
+        width: 280px;
+    }
+
+    .hebergements a {
+        min-width: 280px;
+    }
+
+
 }
