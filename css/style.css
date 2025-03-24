@@ -165,7 +165,7 @@ nav a:hover {
     display: flex;
 }
 
-.zone-recherche-portable #input-recherche {
+.zone-recherche-portable #input-recherche-phones {
     width: 236px;
     font-weight: 700;
     font-size: 18px;
@@ -173,7 +173,7 @@ nav a:hover {
     border: none;
 }
 
-.zone-recherche-portable #input-recherche::placeholder {
+.zone-recherche-portable #input-recherche-phones::placeholder {
     color: black;
 }
 
