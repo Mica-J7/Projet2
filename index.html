@@ -37,7 +37,7 @@
                     <div class="logo-gps">
                         <img src="images/logo/pointgps.png" alt="Icone de point GPS">
                     </div>
-                        <form>
+                        <form action="#" method="post">
                             <input type="text" id="input-recherche" placeholder="Marseille, France" aria-label="Rechercher">
                             <button type="submit">Rechercher</button>
                         </form>
@@ -48,45 +48,49 @@
                     <div class="logo-gps">
                         <img src="images/logo/pointgps.png" alt="Icone de point GPS">
                     </div>
-                        <form>
+                        <form action="#" method="post">
                             <input type="text" id="input-recherche-phones" placeholder="Marseille, France" aria-label="Rechercher">
-                            <button type="submit"><img id="logo-loupe" src="images/logo/loupe.png" alt="Logo de loupe"></button>
+                            <button type="submit">
+                                <img id="logo-loupe" src="images/logo/loupe.png" alt="Logo de loupe">
+                            </button>
                         </form>
                 </div>
 <!-- End of the part visible only for small devices (phones, less than 768px) -->
 
                 <div class="filterbar">
-                    <h2>Filtres</h2>
-                    <div class="all-filters">
-                        <div class="filters-line">
-                            <a href="#">
+                    <span class="filters-span">Filtres</span>
+                    
+                        <form action="#" method="post">
+                            <div class="filters-line">
                                 <div class="filter">
-                                    <img src="images/logo/billet.png" alt="Icone de billet">
-                                    <h3>Économique</h3>
+                                    <button type="submit" name="filters" value="economique">
+                                        <img src="images/logo/billet.png" alt="Icone de billet">
+                                        <span>Économique</span>
+                                    </button>
                                 </div>
-                            </a>
-                            <a href="#">
                                 <div class="filter">
-                                    <img src="images/logo/famille.png" alt="Icone de bonhomme">
-                                    <h3>Familial</h3>
+                                    <button type="submit" name="filters" value="familial">
+                                        <img src="images/logo/famille.png" alt="Icone de bonhomme">
+                                        <span>Familial</span>
+                                    </button>
                                 </div>
-                            </a>
-                        </div>
-                        <div class="filters-line">
-                            <a href="#">
+                            </div>
+                            <div class="filters-line">
                                 <div class="filter">
-                                    <img src="images/logo/coeur.png" alt="Icone de coeur">
-                                    <h3>Romantique</h3>
+                                    <button type="submit" name="filters" value="romantique">
+                                        <img src="images/logo/coeur.png" alt="Icone de coeur">
+                                        <span>Romantique</span>
+                                    </button>
                                 </div>
-                            </a>
-                            <a href="#">
                                 <div class="filter">
-                                    <img src="images/logo/flamme.png" alt="Icone de flamme">
-                                    <h3>Nos pépites</h3>
+                                    <button type="submit" name="filters" value="pepites">
+                                        <img src="images/logo/flamme.png" alt="Icone de flamme">
+                                        <span>Nos pépites</span>
+                                    </button>
                                 </div>
-                            </a>
-                        </div>
-                    </div>
+                            </div>
+                        </form>
+                    
                 </div>
                 <div class="infobar">
                         <img src="images/logo/info.png" alt="Icone d'info">
@@ -329,7 +333,7 @@
 
         <footer>
                 <div class="footer-article">
-                    <h3>À propos</h3>
+                    <span>À propos</span>
                     <ul>
                         <li><a href="#">Fonctionnement du site</a></li>
                         <li><a href="#">Conditions générales</a></li>
@@ -337,14 +341,14 @@
                     </ul>
                 </div>
                 <div class="footer-article">
-                    <h3>Nos hébergements</h3>
+                    <span>Nos hébergements</span>
                     <ul>
                         <li><a href="#">Charte qualité</a></li>
                         <li><a href="#">Proposer votre hôtel</a></li>
                     </ul>
                 </div>
                 <div class="footer-article">
-                    <h3>Assistance</h3>
+                    <span>Assistance</span>
                     <ul>
                         <li><a href="#">Centre d'aide</a></li>
                         <li><a href="#">Nous contacter</a></li>
