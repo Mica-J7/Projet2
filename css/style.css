@@ -217,12 +217,7 @@ nav a:hover {
     gap: 15px;
 }
 
-.filter-frame-one {
-    display: flex;
-    gap: 15px;
-}
-
-.filter-frame-two {
+.filters-line {
     display: flex;
     gap: 15px;
 }
@@ -356,13 +351,7 @@ nav a:hover {
     margin-bottom: 5px;
 }
 
-.cards-line-one {
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
-}
-
-.cards-line-two {
+.hebergements-cards-line {
     display: flex;
     justify-content: space-between;
     gap: 30px;
@@ -430,8 +419,14 @@ nav a:hover {
     display: flex;
 }
 
+.activites-cards-line {
+    display: flex;
+    justify-content: space-between;
+}
+
 .activites a {
     width: 23%;
+    height: 100%;
 }
 
 .activites-card {
@@ -441,25 +436,21 @@ nav a:hover {
     max-height: 439px;
     border-radius: 20px;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+    aspect-ratio: 3 / 4;
 }
 
 .activites img {
-    height: 380px;
+    height: 100%;
     border-radius: 20px 20px 0 0;
     object-fit: cover;
 }
 
 .activites .card-content {
-    padding: 20px 19px 20px 19px;
+    padding: 20px 19px;
 }
 
 .activites .card-title {
     margin: 0;
-}
-
-.activites-cards-line {
-    display: flex;
-    gap: 30px;
 }
 
 /****** Footer ***********/
@@ -483,23 +474,7 @@ footer li {
     margin-bottom: 10px;
 }
 
-footer .a-propos {
-    display: flex;
-    flex-direction: column;
-    width: 33%;
-    padding: 20px;
-    gap: 15px;
-}
-
-footer .nos-hebergements {
-    display: flex;
-    flex-direction: column;
-    width: 33%;
-    padding: 20px;
-    gap: 15px;
-}
-
-footer .assistance {
+.footer-article {
     display: flex;
     flex-direction: column;
     width: 33%;
@@ -555,20 +530,8 @@ footer .assistance {
         font-size: 14px;
     }
 
-    .activites-cards-line {
-       width: 864px;
-    }
-
-    .activites a {
-        min-width: 23%;
-    }
-
     .activites-card {
-        height: 270px;
-    }
-
-    .activites-card img {
-        height: 200px;
+        max-height: 270px;
     }
 }
 
@@ -640,13 +603,8 @@ footer .assistance {
         max-width: 335px;
     }
 
-    .filter-frame-one {
+    .filters-line {
         width: 100%;
-        height: 50px;
-        gap: 10px;
-    }
-
-    .filter-frame-two {
         height: 50px;
         gap: 10px;
     }
@@ -691,12 +649,7 @@ footer .assistance {
         margin: 0;
     }
 
-    .cards-line-one {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .cards-line-two {
+    .hebergements-cards-line {
         flex-direction: column;
         gap: 15px;
     }
@@ -729,12 +682,19 @@ footer .assistance {
 
     footer {
         flex-direction: column;
+        padding: 30px;
+        gap: 50px;
     }
+
+    .footer-article {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+        gap: 15px;
+    }
+
 }
-
-
-
-
 
 
 
@@ -761,5 +721,8 @@ footer .assistance {
         min-width: 280px;
     }
 
+    .activites-card {
+        width: 280px;
+    }
 
 }
